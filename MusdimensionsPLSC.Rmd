@@ -13,13 +13,6 @@ always_allow_html: true
 
 ```{r PLSCpreamble, eval = FALSE}
 ## Preamble
-
-This document analyzes data that has already been cleaned and processed in `MusicalDimensions.Rmd` and `MusicalDescriptors.Rmd`. Those two files analyzed each dataset individually, while this combines the two analyses using a Partial Least Squares analysis on the two independent datasets. This is intended to determine if there is a musical 'cognitive space', to be compared to other sensory domains, such as beer taste. The initial concept for this project comes from Mathilde Vandenberghe, Brendon Mizener composed the stimuli, administered the surveys, and ran primary analyses. Code and analysis by Brendon Mizener with assistance from Dr. Herve Abdi.
-
-Document created: 07 Jan. 2021
-Most recent update: 15 Jan. 2021
-
-```
 ## Packages
 
 In order to run both the data preprocessing and the analysis, we need the standard packages and a few more.
@@ -42,8 +35,10 @@ These ones are used for displaying and plotting
 * `grid` 
 * `corrplot`
 
+```
+
 ```{r setup}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, warning = FALSE, message = FALSE)
 
 rm(list = ls())
 
@@ -63,6 +58,14 @@ library(corrplot)
 ```
 
 # Introduction
+
+## Purpose
+
+This document analyzes data that has already been cleaned and processed in `MusicalDimensions.Rmd` and `MusicDescriptors.Rmd`. Those two files analyzed each dataset individually, and this combines the two analyses using a Partial Least Squares analysis on the two independent datasets. This is intended to determine if there is a musical 'cognitive space', to be compared to other sensory domains, such as beer taste. The initial concept for this project comes from Mathilde Vandenberghe. Brendon Mizener composed the stimuli, administered the surveys, and ran primary analyses. Code and analysis by Brendon Mizener with assistance from Dr. Herve Abdi.
+
+Document created: 07 Jan. 2021
+Most recent update: `r date()`
+
 
 ## File names for results
 
